@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+		<title>Music Distribution</title>
+		
+		<style type="text/css">
+			body {
+				text-align: center;
+				width: 100%;
+				margin: auto;
+				min-width: 952px;
+				max-width: 1280px;
+			}
+			a {
+				text-decoration: none;
+			}
+			#menu_bar {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				opacity: 0.55;
+				background-color: black;
+				padding-bottom: 13px;
+				max-width: 1318px;
+				height: 48px;
+				overflow: hidden;
+			}
+			#menu_bar img {
+				display: inline;
+				float: left;
+				height: 48px;
+				padding: 8.5px;
+			}
+			ul {
+				margin-right: 1%;
+			}
+			li {
+				list-style-type: none;
+				display: inline;
+				padding: 8.5px;
+				float: right;
+			}
+			li a {
+				display: block;
+				color: white;
+				opacity: 1;
+			}
+			li a:hover {
+				color: #FF0015;
+			}
+			
+			#main_banner #banner_bg {
+				position: relative;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+			}
+			#main_banner #icon {
+				width: 5%;
+				max-width: 65.8px;
+				top: 145px;
+			}
+			#main_banner h2 {
+     			font-weight: lighter;
+				color: white;
+				letter-spacing: 2px;
+				margin: 5px;
+			}
+			#main_banner h4 {
+				/* for all other browsers */
+				-moz-text-decoration-line: overline; 
+     			text-decoration-line: overline; 
+     			text-decoration: overline;
+     			/* can't have a gap b/w text and line*/ 
+     			font-weight: lighter;
+				color: white;
+				letter-spacing: 1px;
+				margin: 0;
+				padding: 0;
+				/* 
+				border-top: 1px solid;
+				margin-left: 46.5%;
+				width: 7%;
+				*/
+			}
+			#intro {
+				margin-top: -33%;
+				margin-bottom: 200px;
+			}
+			#intro p {
+				color: white;
+				padding-top: 65px;
+				font-weight: lighter;
+				letter-spacing: 1px;
+				font-size: 14px;
+			}
+
+			.dist_intro img {
+				width: 100%;
+			}
+			.dist_intro {
+				margin: auto;
+				width: 100%;
+				padding-bottom: 61px;
+				background-image: url(../designs/dist_source/md_intro.png);
+    			background-repeat: no-repeat;
+			}
+			.dist_intro #content, #content_2 {
+				width: 90%;
+				display: inline-flex;
+				margin: 40px 0px 40px 0px;
+				justify-content: center;
+			}
+			#content_2 {
+				margin-top: 10px;
+			}
+			
+			.dist_intro #content p {
+				width: 105%;
+				font-size: 100%;
+			}
+			#headings {
+				letter-spacing: 4px;
+				font-weight: bold;
+				margin-bottom: -20%;
+			}
+			#one {
+				width: 13%;
+				margin-right: 12%;
+			}
+			#two {
+				width: 13%;
+			}
+			#three {
+				width: 13%;
+				margin-left: 12%;
+			}
+			#four {
+				width: 13%;
+				margin-right: 12%;
+			}
+			#five {
+				width: 13%;
+			}
+			#walk_with_u {
+				/* for all other browsers */
+				-moz-text-decoration-line: overline; 
+     			text-decoration-line: overline; 
+     			text-decoration: overline;
+     			/* can't have a gap b/w text and line*/ 
+			}
+			#ad img {
+				width: 1318px;
+				z-index: -2;
+				margin-bottom: 0;
+				/* image has white border line?? */
+			}
+			.membership_fee {
+				background-color: #4E585F;
+				margin-top: 0%;
+			}
+			.membership_fee img {
+				margin-top: 5%;
+				width: 43%;
+			}
+			.membership_fee .content {
+				margin-top: -20px;
+				padding: 0%;
+				color: white;
+				letter-spacing: 0.5px;
+			}
+			.membership_fee #heading {
+				text-align: center;
+				color: white;
+				letter-spacing: 6px;
+				font-size: 135%;
+				font-weight: lighter;
+			}
+			#logos {
+				text-align: left;
+				width: 75%;
+				padding-top: 30px;
+				padding-bottom: 50px;
+				margin: 0 auto;
+			}
+			#logos img {
+				width: 12%;
+				padding: 3% 0 0 6%;
+				filter: grayscale(100%);
+			}
+			#logos img:hover {
+				filter: grayscale(0%);
+			}
+			.header a {
+				color: #E01D7B;
+			}
+			.content { 
+				color: #6E6E6E;
+			}
+			#price {
+				color: #CEE974;
+				font-weight: bold;
+			}
+			footer {
+				background-color: #DADADA;
+				font-size: 10.5px;
+				letter-spacing: 0.3px;
+			}
+			footer p {
+				text-align: left;
+				float: left;
+				padding: 20px;
+				padding-left: 8%;
+				padding-bottom: 10px;
+				margin-bottom: 0;
+			}
+			footer #rights {
+				clear: left;
+				top: 0;
+			}
+			#sns {
+				font-size: 13px;
+				letter-spacing: 1px;
+				font-weight: bold;
+				color: #4F4C4D;
+				float: right;
+				padding-right: 8%;
+			}
+			.sns img {
+				width: 40px;
+				display: inline-block;
+				clear: right;
+			}
+			.sns {
+				float: right;
+				clear: right;
+				padding-right: 8%;
+				top: 0px;
+			}
+			.logo {
+				float: right;
+				clear: right;
+				margin-right: 8%;
+				top: 0px;
+			}
+			.pison_logo img {
+				height: 50px;
+				display: inline-flex;
+				clear: right;
+			}
+			.pison_logo {
+				height: 30%;
+				float: right;
+				clear: right;
+				padding-right: 6%;
+				top: 0px;
+			}
+			#clear {
+				clear: both;
+			}
+
+		</style>	
+
+	<body lang="ko-KR">
+
+		<div id="main_banner">
+			<img id="banner_bg" src="../designs/dist_source/md_header.png">
+			<div id="intro">
+				<img id="icon" src="../designs/dist_source/distribution.png">
+				<h2>MUSIC DISTRIBUTION</h2>
+				<h4>MS 음원배급</h4>
+				<p></p>
+			</div>
+		</div>
+
+		<div id="menu_bar">
+			<a href="main_page.html"><img src="../designs/mainpage/brand_logo.png"></a>
+			<ul>
+				<li><a href="">Sign up</a></li>
+				<li><a href="">Log in</a></li>
+				<li><a href="contact_source.html">About</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><a href="">앨범</a></li>
+				<li><a href="mp_source.html">MS 저작권관리</a></li>
+				<li><a href="musics_pro.html">MS 프로</a></li>
+				<li><a href="dist_source.html">MS 음원배급</a></li>
+			</ul>	
+		</div>
+
+		<div class="dist_intro">
+			<div id="content">
+				<div id="one">
+					<img src="../designs/dist_source/dis_1.png">
+					<p id="headings">모든 과정을 온라인으로</p>
+					<br />
+					<p class="content">MusicSpray<sup>TM</sup>가 제공하는 온라인 서비스를 통해 언제 어디서나 쉽고 짜르게 당신의 음악을 전 세계로 전달 할 수 있습니다.</p>
+				</div>
+					
+				<div id="two">
+					<img src="../designs/dist_source/dis_2.png">
+					<p id="headings">당신의 음악을 전 세계로</p>
+					<br />
+					<p class="content">전 세셰 120개국 이상의 음악 팬들이 당신의 음악을 듣게 될 널것입니다.</p>
+				</div>
+					
+				<div id="three">
+					<img src="../designs/dist_source/dis_3.png">
+					<p id="headings">단 한번의 가입</p>
+					<br />
+					<p class="content">단 한번의 가입으로 전 세계에서 무제한으로 당신의 디지털 음반을 발매해 보세요.</p>
+				</div>	
+			</div>
+			<div id="content_2">
+				<div id="four">
+					<img src="../designs/dist_source/dis_4.png">
+					<p id="headings">글로벌 스토어로 유통</p>
+					<br />
+					<p class="content">Apple Music, Google Play Music, Spotify 등 글로벌 뮤직 스토어를 통해 당신의 음악을 편리하게 들려주세요.</p>
+				</div>
+					
+				<div id="five">
+					<img src="../designs/dist_source/dis_5.png">
+					<p id="headings">모든 스토어와 직배급</p>
+					<br />
+					<p class="content">MusicSpray<sup>TM</sup>의 직배급망을 통해 당신의 음악을 더 빨리 소개하고창작자의 권리를 더 많이 누릴 수 있습니다.</p>
+				</div>
+			</div>
+			<br />
+			<a id="learn_more" href="">Music Publishing 자세히 알아보기<!-- arrow? --></a>
+			<p id="walk_with_u">WALK WITH YOU</p>
+		</div>
+		
+		<div class="ad">
+			<img src="../designs/dist_source/md_pricing.png">
+			<div id="clear"></div>
+		</div>
+		
+		<div class="membership_fee">
+			<img src="../designs/mainpage/fee_ad.png">
+			<p id="heading">ONE TIME MEMBERSHIP FEE <span id="price"> 99,000원</span></p>
+			<p class="content">단한번의 가입비로 MUSICSPRAY 의 모든 서비스를 사용해보세요.</p>
+			<img src="../designs/mainpage/musicspray_logo_white.png" style="width: 8%; margin: 0px 0px 25px 0px; ">
+		</div>
+		
+		<div id="logos">
+			<img src="../designs/dist_source/logo/logo_1.png">
+			<img src="../designs/dist_source/logo/logo_2.png">
+			<img src="../designs/dist_source/logo/logo_3.png">
+			<img src="../designs/dist_source/logo/logo_4.png">
+			<img src="../designs/dist_source/logo/logo_5.png">
+			<img src="../designs/dist_source/logo/logo_6.png">
+			<img src="../designs/dist_source/logo/logo_15.png">
+			<img src="../designs/dist_source/logo/logo_7.png">
+			<img src="../designs/dist_source/logo/logo_8.png">
+			<img src="../designs/dist_source/logo/logo_9.png">
+			<img src="../designs/dist_source/logo/logo_10.png">
+			<img src="../designs/dist_source/logo/logo_11.png">
+			<img src="../designs/dist_source/logo/logo_12.png">
+			<img src="../designs/dist_source/logo/logo_13.png">
+			<img src="../designs/dist_source/logo/logo_14.png">
+			<img src="../designs/dist_source/logo/logo_16.png">
+			<img src="../designs/dist_source/logo/logo_17.png">
+			<img src="../designs/dist_source/logo/logo_18.png">
+			<img src="../designs/dist_source/logo/logo_19.png">
+		</div>
+		
+		<footer>
+			<div>
+				<p>회사명 : (주)비손콘텐츠 ㅣ 대표자 : 하성애 ㅣ<br />사업자등록번호 : 214-88-6201 <br />한국 : 경기도 성남시 분당구 대왕판교로 660, A동 303호<br />(삼평동, 유스페이스1)<br />미국 : Start up Island, KOTRA SV IT Center, 3003 N.<br />1st St, San Jose, CA 95134, USA<br />프랑스 : 18Rue Jacques Cartier 31100 Toulouse France</p>
+					<p id="sns">FOLLOW MUSICSPRAY</p>
+					<div class="sns">
+						<img src="../designs/mainpage/footer/sns1.png">
+						<img src="../designs/mainpage/footer/sns2.png">
+						<img src="../designs/mainpage/footer/sns3.png">
+					</div>
+					<div class="pison_logo">
+						<img src="../designs/mainpage/footer/pisonlogo.png">
+						<img src="../designs/mainpage/footer/musicspraylogo.png">
+						<img src="../designs/mainpage/footer/kpopstreetlogo.png">
+					</div>
+				<p id="rights">copyright(c) 2016 Music Spray All rightreserved.</p>
+				<div id="clear"></div>
+			</div>	
+		</footer>	
+			
+
+
+	</body>	
+		
+</html>

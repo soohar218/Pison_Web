@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+	<head>
+		<title>About & Contact</title>
+		
+		<style type="text/css">
+			body {
+				text-align: center;
+				width: 100%;
+				margin: auto;
+				min-width: 952px;
+				max-width: 1280px;
+			}
+			a {
+				text-decoration: none;
+			}
+			#menu_bar {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				opacity: 0.55;
+				background-color: black;
+				padding-bottom: 13px;
+				max-width: 1318px;
+				height: 48px;
+				overflow: hidden;
+			}
+			#menu_bar img {
+				display: inline;
+				float: left;
+				height: 48px;
+				padding: 8.5px;
+			}
+			ul {
+				margin-right: 1%;
+			}
+			li {
+				list-style-type: none;
+				display: inline;
+				padding: 8.5px;
+				float: right;
+			}
+			li a {
+				display: block;
+				color: white;
+				opacity: 1;
+			}
+			li a:hover {
+				color: #FF0015;
+			}
+
+			#main_banner #banner_bg {
+				position: relative;
+				top: 0;
+				width: 100%;
+				z-index: -1;
+			}
+			#main_banner #icon {
+				width: 5%;
+				max-width: 65.8px;
+				top: 145px;
+			}
+			#main_banner h2 {
+     			font-weight: lighter;
+				color: white;
+				letter-spacing: 2px;
+				margin: 5px;
+			}
+			#main_banner h4 {
+				/* for all other browsers */
+				-moz-text-decoration-line: overline; 
+     			text-decoration-line: overline; 
+     			text-decoration: overline;
+     			/* can't have a gap b/w text and line*/ 
+     			font-weight: lighter;
+				color: white;
+				letter-spacing: 1px;
+				margin: 0;
+				padding: 0;
+				/* 
+				border-top: 1px solid;
+				margin-left: 46.5%;
+				width: 7%;
+				*/
+			}
+			#intro {
+				margin-top: -33%;
+				margin-bottom: 20%;
+			}
+			#intro p {
+				color: white;
+				padding-top: 65px;
+				font-weight: lighter;
+				letter-spacing: 1px;
+				font-size: 14px;
+			}
+			
+			#contact_us {
+				margin-bottom: 100px;
+			}
+			#contact_intro {
+				margin-top: 2%;
+				padding: 20px;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				background-color: #F7F7F7;
+			}
+			#contact_intro p {
+				text-align: right;
+				margin-top: 0;
+				margin-right: 17%;
+				color: #6C7679;
+			}
+			#contact_intro .pison_logo {
+				margin-left: 17%;
+				width: 938px;
+			}
+			#left {
+				padding-right: 1%;
+			}
+			#right {
+				padding-right: 5%;
+			}
+			#contact_info p {
+				text-align: left;
+				margin-top: 0;
+				margin-right: 17%;
+				color: #6C7679;
+			}
+			#contact_info img {
+				width: 6%;
+				padding-right: 2%;
+			}
+			#contact_info {
+				margin-top: 44px;
+				text-align: left;
+				margin-left: 40%;
+			}
+			/*
+			#name, #email {
+				width: 40%;
+				font-size: 18px;
+			}
+			#message {
+				width: 81.1%;
+				font-size: 18px;
+			}
+			#submit {
+				width: 82%;
+				color: white;
+				background-color: #6C7679; 
+				border: none;
+				text-shadow: none;
+				border-bottom: none;
+				padding: 10px;
+				margin: 0;
+			}
+			*/
+			#ms_lab p {
+				font-size: /* 1.7vw */ 18.5px;
+			}
+			#ms_lab h3 {
+				padding-top: 7%;
+				font-size: /* 2vw */ 23px;
+			}
+			.ad {
+				background-color: #BFD6D6;
+				text-align: right;
+				color: #707C85;
+			}
+			.ad img {
+				width: 45%;
+				float: left;
+				margin-left: 8%;
+				margin-right: 6%;
+			}
+			.ad p, h3 {
+				margin-right: 8%;
+			}
+			.ad_2 {
+				background-color: white;
+				color: #707C85;
+			}
+			.ad_2 img {
+				width: 84%;
+			}
+			.ad_2 h3 {
+				text-align: left;
+				margin-bottom: 0;
+			}
+			.ad_2 p {
+				margin-top: 0;
+				margin-bottom: 7%;
+			}
+			.ad_3 {
+				background-color: #C3B8C9;
+				text-align: left;
+				color: white;
+			}
+			.ad_3 img {
+				width: 43%;
+				float: right;
+				margin-right: 8%;
+				margin-left: 6%;
+			}
+			.ad_3 p, h3 {
+				margin-left: 8%;
+			}
+
+			#rectangle {
+				margin-left: 5%;
+				text-align: center;
+				width: 90%;
+				height: 12px;
+				background-color: #E1E1E1;
+			}
+			#border_line h3 {
+				text-align: right;
+				margin-right: 5%;
+				margin-bottom: 0;
+				font-size: 20px;ㅛ
+			}
+
+			footer {
+				background-color: #DADADA;
+				font-size: 10.5px;
+				letter-spacing: 0.3px;
+			}
+			footer p {
+				text-align: left;
+				float: left;
+				padding: 20px;
+				padding-left: 8%;
+				padding-bottom: 10px;
+				margin-bottom: 0;
+			}
+			footer #rights {
+				clear: left;
+				top: 0;
+			}
+			#sns {
+				font-size: 13px;
+				letter-spacing: 1px;
+				font-weight: bold;
+				color: #4F4C4D;
+				float: right;
+				padding-right: 8%;
+			}
+			.sns img {
+				width: 40px;
+				display: inline-block;
+				clear: right;
+			}
+			.sns {
+				float: right;
+				clear: right;
+				padding-right: 8%;
+				top: 0px;
+			}
+			.logo {
+				float: right;
+				clear: right;
+				margin-right: 8%;
+				top: 0px;
+			}
+			.pison_logo img {
+				height: 50px;
+				display: inline-flex;
+				clear: right;
+			}
+			footer .pison_logo {
+				height: 30%;
+				float: right;
+				clear: right;
+				padding-right: 6%;
+				top: 0px;
+			}
+			#clear {
+				clear: both;
+			}
+
+		</style>	
+
+	<body lang="ko-KR">
+
+		<div id="main_banner">
+			<img id="banner_bg" src="../designs/contact_source/contact_header.png">
+			<div id="intro">
+				<img id="icon" src="../designs/contact_source/contact.png">
+				<h2>ABOUT</h2>
+				<h4>MS 음원배급</h4>
+				<p>MusicSpray<sup>TM</sup>는 당신의 파트너 입니다.</p>
+			</div>
+		</div>
+
+		<div id="menu_bar">
+			<a href="main_page.html"><img src="../designs/mainpage/brand_logo.png"></a>
+			<ul>
+				<li><a href="">Sign up</a></li>
+				<li><a href="">Log in</a></li>
+				<li><a href="contact_source.html">About</a></li>
+				<li><a href="">FAQ</a></li>
+				<li><a href="">앨범</a></li>
+				<li><a href="mp_source.html">MS 저작권관리</a></li>
+				<li><a href="musics_pro.html">MS 프로</a></li>
+				<li><a href="dist_source.html">MS 음원배급</a></li>
+			</ul>	
+		</div>
+		
+		<div id="contact_us">
+			<div id="border_line">
+				<h3>CONTACT US</h3>
+				<div id="rectangle"></div>
+			</div>
+			<div id="contact_intro">
+				<div class="pison_logo">
+					<img id="left" src="../designs/mainpage/footer/pisonlogo.png" align="left">
+					<img id="right" src="../designs/contact_source/musicspraylogo_dark.png" align="left">
+				</div>	
+				<p>뮤직스프레이는 주식회사 비손 콘텐츠가 운영하는 아티스트와 음악 시장을 연결하고 아티스트의 음악활동을 돕는 Worldwide Music Platform 입니다.</p>			
+				<div id="contact_info">
+					<img src="../designs/contact_source/contact_1.png" align="left"><p>상담 전화 | 070-8834-0708<br />상담 문의 | 오후 2시 - 5시</p>
+					<img src="../designs/contact_source/contact_2.png" align="left"><p>계좌 번호 | 기업은행 939-000229-04-011<br />(주)비손콘텐츠</p>				
+				</div>
+			</div>
+			
+			<!-- This is the sending message section
+			<div>
+				<h3>SEND MESSAGE</h3>
+				<p></p>
+				<form action="">
+					<textarea id="name" name="name" rows="1">YOUR NAME</textarea>
+					<textarea id="email" name="email" rows="1">YOUR EMAIL</textarea>
+					<br />
+					<textarea id="message" name="message" rows="7">YOUR MESSAGE</textarea>
+					<br />
+					<input id="submit" type="submit" name="submit" value="SUBMIT">
+				</form>
+			</div>
+			-->
+		</div>
+
+		<div id="ms_lab">
+			<div id="border_line">
+				<h3>MUSICSPRAY LAB</h3>
+				<div id="rectangle"></div>
+			</div>
+			<div class="ad">
+				<img src="../designs/contact_source/red_wine.png">
+				<h3>Red Wine</h3>
+				<p>뮤직스프레이는 Machine Learning을 이용한 유투브내 Auto Detecting Technology를 개발 중 입니다. Red Wine은 더욱 정확하고 명확하게 당신의 저작권료를 찾아줄 것입니다. 뿐만 아니라 다양한 음악관련 분야에 사용될 것 입니다.</p>
+				<div id="clear"></div>
+			</div>
+
+			<div class="ad_2">
+				<h3>Sound Dex</h3>
+				<img src="../designs/contact_source/sounddex.png">
+				<p>뮤직스프레이는 컨텐츠 전송 표준인 DDEX를 구현하여 대행업체 없이 직접 음원 배급과<br />정산을 할 수 있어 보다 싶고 간단한 서비스를 제공합니다.</p>
+			</div>
+				
+			<div class="ad_3">
+				<img src="../designs/contact_source/kpop-street.png">
+				<h3>Kpop Street</h3>
+				<p>뮤직스프레이는 국내 아티스트들의 보다 효율적인 해외 홍보를 위해 유투브, 인스타그램, 페이스북의 컨텐츠를 개발, 제작하고 있습니다. 소비자 반응 등을 분석하여 아티스트의 음악과 비전을 소비자들에게 알리고 쉽게 공유 할 수 있는 플랫폼이 제공됩니다.</p>
+				<div id="clear"></div>
+			</div>
+		</div>	
+		
+		<footer>
+			<div>
+				<p>회사명 : (주)비손콘텐츠 ㅣ 대표자 : 하성애 ㅣ<br />사업자등록번호 : 214-88-6201 <br />한국 : 경기도 성남시 분당구 대왕판교로 660, A동 303호<br />(삼평동, 유스페이스1)<br />미국 : Start up Island, KOTRA SV IT Center, 3003 N.<br />1st St, San Jose, CA 95134, USA<br />프랑스 : 18Rue Jacques Cartier 31100 Toulouse France</p>
+					<p id="sns">FOLLOW MUSICSPRAY</p>
+					<div class="sns">
+						<img src="../designs/mainpage/footer/sns1.png">
+						<img src="../designs/mainpage/footer/sns2.png">
+						<img src="../designs/mainpage/footer/sns3.png">
+					</div>
+					<div class="pison_logo">
+						<img src="../designs/mainpage/footer/pisonlogo.png">
+						<img src="../designs/mainpage/footer/musicspraylogo.png">
+						<img src="../designs/mainpage/footer/kpopstreetlogo.png">
+					</div>
+				<p id="rights">copyright(c) 2016 Music Spray All rightreserved.</p>
+				<div id="clear"></div>
+			</div>	
+		</footer>	
+
+	</body>	
+		
+</html>
